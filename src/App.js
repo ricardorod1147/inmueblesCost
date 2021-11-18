@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, {useState } from 'react';
 import './App.css';
 
+// COMPONENTS
+import Header from './componets/Header/Header';
+import Calcularform from './componets/Calcularform/Calcularform';
+import Resum from './View/Resum/Resum';
+
 function App() {
+
+  const [valor, setValor] = useState("");
+  const [ren, setRen] = useState(null);
+
+  const handleCalculator = (e) =>{
+    const val = e.target.value;
+    setValor(val);
+
+  }
+  const handleView = () => {
+    const num = parseInt(valor);
+    setRen(num);
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header />
+     <Calcularform 
+     handleCalculator={handleCalculator} 
+     handleView={handleView}
+    />
+    {
+     
+      <Resum ren={ren}/>
+    }
+     
     </div>
   );
 }
