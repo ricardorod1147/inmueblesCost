@@ -1,4 +1,7 @@
 .header-title {
+  display: flex;
+  align-items: center;
   background-color: #f58840;
   height: 5rem;
+  font-size: 13px;
 }

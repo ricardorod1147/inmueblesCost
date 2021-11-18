@@ -16,6 +16,12 @@ function App() {
     setValor(val);
 
   }
+  const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  })
+
   const handleView = () => {
     const num = parseInt(valor);
     setRen(num);
@@ -28,10 +34,8 @@ function App() {
      handleCalculator={handleCalculator} 
      handleView={handleView}
     />
-    {
-     
+    <h3>{formatterPeso.format(valor)}</h3>
       <Resum ren={ren}/>
-    }
      
     </div>
   );
