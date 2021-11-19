@@ -4,11 +4,29 @@
   justify-content: space-around;
 }
 
+.result-container p {
+  font-size: 18px;
+}
+
 .result-container div {
   width: 40%;
-  background-color: aquamarine;
+  margin: 5px;
 }
 .result-container h5 {
   width: 50%;
   height: 2px;
+}
+
+.cuota {
+  background-color: #77d970;
+}
+.vende {
+  background-color: #ffe1af;
+}
+
+.resto {
+  background-color: #e59934;
+}
+.total {
+  background-color: #f9b208;
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 
+// STYLES
+import './Calcularform-style.css';
+
 const Calcularform = ({handleCalculator, handleView}) => {
     return (
-        <div>
+        <div className="container-div">
             <form>
                 <input type="text" placeholder="Valor del Inmueble" onChange={handleCalculator} />
              

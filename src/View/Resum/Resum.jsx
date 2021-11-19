@@ -31,59 +31,60 @@ const Resum = ({ren }) => {
                     <h5>Comprador</h5>
                     <h5>Vendedor</h5>
 
-                    <div>
+                    <div className="cuota">
                     <h4>Cuota Inicial 30 %</h4>
                     <p>{formatterPeso.format(cuotaInicial)}</p>
                     </div>
 
-                    <div>
-                    <h4>Escritura 50%</h4>
-                    <p>{formatterPeso.format(escritura)}</p>
-                    </div>
+                  <div>
 
-                    <div>
-                    <h4>Cuota Restante</h4>
+                  </div>
+                 
+
+                    <div className="cuota">
+                    <h4>Saldo Contra Entrega</h4>
                     <p>{formatterPeso.format(cuotaRes)}</p>
                     </div>
                     
-                    <div>
-                   <h4>Retefuente 1%</h4>
-                    <p>{formatterPeso.format(reteFuente)}</p>
-                   </div>
+                   <div></div>
 
-                    <div>
-                    <h4>Escritura 50%</h4>
+                    <div className="resto">
+                    <h4>Gastos Notariales  50%</h4>
                     <p>{formatterPeso.format(escritura)}</p>
                     </div>
 
-                    <div>
-
+                    <div className="vende">
+                    <h4>Gastos Notariales 50%</h4>
+                    <p>{formatterPeso.format(escritura)}</p>
                     </div>
 
 
-                    <div>
+                    <div className="resto">
                    <h4>Boleta Fiscal 1.2%</h4>
                     <p>{formatterPeso.format(boletaFiscal.toFixed(0))}</p>
                    </div>
 
-                  <div>
-                      
-                    </div>
+                   <div className="vende">
+                   <h4>Retefuente 1%</h4>
+                    <p>{formatterPeso.format(reteFuente)}</p>
+                   </div>
+
+               
 
                   
-                   <div>
+                   <div className="resto">
                    <h4>Registro 1%</h4>
                     <p>{formatterPeso.format(Registro)}</p>
                    </div>
 <div></div>
 
                  
-                  <div>
-                  <h4>Total Comprador </h4>
+                  <div className="total">
+                  <h4>Total Gastos Escrituración Comprador </h4>
                     <p>{formatterPeso.format(valorTotalComprador)}</p>
                   </div>
-                  <div>                  
-                  <h4>Total Vendedor </h4>
+                  <div className="total">                  
+                  <h4>Total Gastos Escrituración Vendedor </h4>
                     <p>{formatterPeso.format(valorTotalVendedor)}</p>
                   </div>
                  
