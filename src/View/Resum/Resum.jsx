@@ -12,17 +12,15 @@ const Resum = ({ren }) => {
         minimumFractionDigits: 0
       })
 
-      
-
     const escritura =  (((valorIn*0.54)/100)/2);
-     
+    const escrituraDos =  (((valorIn*0.54)/100)/2);
     const boletaFiscal = ((valorIn*1.2)/100);
     const Registro = ((valorIn*1)/100);
     const valorTotalComprador = (escritura+boletaFiscal+Registro).toFixed(0);
     const cuotaInicial = ((valorIn*30)/100).toFixed(0);
     const cuotaRes = ((valorIn-cuotaInicial)).toFixed(0);
     const reteFuente = ((valorIn*1)/100).toFixed(0);
-    const valorTotalVendedor = (escritura/2)+reteFuente;
+    const valorTotalVendedor = ((escrituraDos*1)+(reteFuente*1));
     
     return (
         
@@ -32,35 +30,47 @@ const Resum = ({ren }) => {
                 (<div className="result-container">
                     <h5>Comprador</h5>
                     <h5>Vendedor</h5>
-                    
+
                     <div>
-                    <h4>Escritura 50%</h4>
-                    <p>{formatterPeso.format(escritura)}</p>
+                    <h4>Cuota Inicial 30 %</h4>
+                    <p>{formatterPeso.format(cuotaInicial)}</p>
                     </div>
 
                     <div>
                     <h4>Escritura 50%</h4>
                     <p>{formatterPeso.format(escritura)}</p>
                     </div>
+
+                    <div>
+                    <h4>Cuota Restante</h4>
+                    <p>{formatterPeso.format(cuotaRes)}</p>
+                    </div>
+                    
+                    <div>
+                   <h4>Retefuente 1%</h4>
+                    <p>{formatterPeso.format(reteFuente)}</p>
+                   </div>
+
+                    <div>
+                    <h4>Escritura 50%</h4>
+                    <p>{formatterPeso.format(escritura)}</p>
+                    </div>
+
+                    <div>
+
+                    </div>
+
 
                     <div>
                    <h4>Boleta Fiscal 1.2%</h4>
                     <p>{formatterPeso.format(boletaFiscal.toFixed(0))}</p>
                    </div>
 
-                   <div>
-                   <h4>Retefuente 1%</h4>
-                    <p>{formatterPeso.format(reteFuente)}</p>
-                   </div>
+                  <div>
+                      
+                    </div>
 
-                    <div>
-                    <h4>Cuota Inicial 30 %</h4>
-                    <p>{formatterPeso.format(cuotaInicial)}</p>
-                    </div>
-                    <div>
-                    <h4>Cuota Restante</h4>
-                    <p>{formatterPeso.format(cuotaRes)}</p>
-                    </div>
+                  
                    <div>
                    <h4>Registro 1%</h4>
                     <p>{formatterPeso.format(Registro)}</p>
